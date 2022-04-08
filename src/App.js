@@ -1,22 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import Counter from './Counter';
 
 function App() {
+  const numInicial = 4;
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Counter(RTL)</h1>
+        <Counter data-test="counter-comp" numInicial={numInicial}/>
       </header>
     </div>
   );

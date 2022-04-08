@@ -1,0 +1,30 @@
+$fontsize: 18px;
+$default-margin: 10px;
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: $default-margin;
+  padding: 10px;
+  #value {
+    margin: $default-margin;
+    font-weight: bold;
+    color: #aeff6b;
+    font-size: 36px;
+  }
+  .button-container {
+    .btn {
+      padding: 4px;
+      border: none;
+      margin:2px;
+      font-size: 12px;
+      font-weight: bold;
+      min-width: 40px;
+      border-radius: 4px;
+      background-color: #1a375c;
+      color: #f7fff7;
+    }
+  } 
+}

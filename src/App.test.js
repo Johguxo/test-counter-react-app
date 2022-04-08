@@ -1,8 +1,30 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+
+test('render the initial number', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  screen.getByText("4");
 });
+
+describe('buttons test', () => {
+  test('button +', () => {
+    render(<App />);
+    const btn = screen.getByRole("button", {name:"+"});
+    fireEvent.click(btn);
+    screen.getByText("5")
+  });
+  test('button reset', () => {
+    render(<App />);
+    const btn = screen.getByRole("button", {name:"Reset"});
+    fireEvent.click(btn);
+    screen.getByText("0")
+  });
+  test('button -', () => {
+    render(<App />);
+    const btn = screen.getByRole("button", {name:"-"});
+    fireEvent.click(btn);
+    screen.getByText("3")
+  });
+})
